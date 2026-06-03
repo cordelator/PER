@@ -119,3 +119,14 @@ nav a:hover {
         border-bottom: none;
     }
 }
+
+/* --- ESTILO PARA EL REPRODUCTOR MP3 (Agregado abajo) --- */
+audio {
+    display: block;
+    margin: 20px auto; /* Centra el reproductor horizontalmente */
+    max-width: 300px; /* Limita el ancho en celulares */
+    border-radius: 30px;
+    background: #111; /* Combina con el fondo de la navegación */
+    box-shadow: 0 0 12px rgb(167, 104, 240); /* Efecto de brillo neón morado */
+    outline: none;
+}
