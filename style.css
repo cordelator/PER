@@ -120,13 +120,29 @@ nav a:hover {
     }
 }
 
-/* --- ESTILO PARA EL REPRODUCTOR MP3 (Agregado abajo) --- */
-audio {
-    display: block;
-    margin: 20px auto; /* Centra el reproductor horizontalmente */
-    max-width: 300px; /* Limita el ancho en celulares */
+/* --- ESTILO PARA EL REPRODUCTOR MP3 VISIBLE (Al final de la página) --- */
+.audio-container {
+    text-align: center;
+    margin: 30px auto;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px; /* Evita que se deforme en pantallas grandes */
+}
+
+.audio-container p {
+    font-size: 14px;
+    color: rgb(167, 104, 240); /* Texto morado neón */
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(167, 104, 240, 0.5);
+}
+
+.audio-container audio {
+    display: inline-block;
+    width: 100%;
     border-radius: 30px;
-    background: #111; /* Combina con el fondo de la navegación */
-    box-shadow: 0 0 12px rgb(167, 104, 240); /* Efecto de brillo neón morado */
+    background: #111; 
+    box-shadow: 0 0 15px rgb(167, 104, 240); /* Brillo neón morado */
     outline: none;
 }
+
