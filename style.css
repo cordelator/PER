@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: radial-gradient(circle at top, #9fa9e9, #000);
+    overflow-x: hidden;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    background:
+        radial-gradient(2px 2px at 20% 30%, rgb(212, 139, 214), transparent),
+        radial-gradient(2px 2px at 70% 80%, rgb(110, 75, 75), transparent),
+        radial-gradient(1.5px 1.5px at 40% 60%, rgb(80, 60, 60), transparent),
+        radial-gradient(2px 2px at 80% 20%, rgb(71, 31, 31), transparent);
+}
+
+
+.header {
+    background: rgb(216, 199, 199);
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid rgb(155, 128, 151);
+    box-shadow: 0 0 10px rgb(156, 122, 149);
+}
+
+
+/* --- BARRA DE NAVEGACIÓN (Base para móvil) --- */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Alinea el botón a la derecha */
+    background: #111;
+    position: relative; /* Clave para que la ventana se posicione bien */
+    padding: 10px 20px;
+    z-index: 100; /* Mantiene el menú por encima de las tarjetas */
+}
+
+/* Estilo del botón hamburguesa */
+.menu-toggle {
+    display: block; 
+    background: none;
+    border: none;
+    color: rgb(167, 104, 240);
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+    width: auto;
+}
+
+/* --- VENTANA PEQUEÑA FLOTANTE (Solo Celular) --- */
+.nav-links {
+    display: none; /* Oculta la ventana por defecto */
+    position: absolute;
+    top: 100%; /* Se posiciona justo abajo de la barra nav */
+    right: 20px; /* Separación desde el borde derecho */
+    background: rgba(17, 17, 17, 0.95); /* Fondo oscuro semitransparente */
+    width: 200px; /* Ancho fijo para que parezca una ventana pequeña */
+    border: 2px solid rgb(155, 128, 151);
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+}
+
+/* Muestra la ventana cuando se activa con JavaScript */
+.nav-links.active {
+    display: flex;
+}
+
+/* Enlaces dentro de la pequeña ventana */
+nav a {
+    color: rgb(167, 104, 240);
+    padding: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+nav a:last-child {
+    border-bottom: none; /* Quita la línea al último enlace */
+}
+
+nav a:hover {
+    background: rgb(179, 138, 176);
+    color: black;
+}
+
+/* --- DISEÑO PARA PANTALLAS GRANDES (PC / Tablet) --- */
+@media (min-width: 768px) {
+    nav {
+        justify-content: center; /* Centra el menú en PC */
+        padding: 0;
+    }
+
+    /* Oculta la hamburguesa en PC */
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Transforma la ventana flotante en una barra horizontal normal */
+    .nav-links {
+        display: flex !important;
+        position: static; /* Desactiva el modo flotante */
+        flex-direction: row;
+        width: auto;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    nav a {
+        padding: 20px;
+        border-bottom: none;
+    }
+}

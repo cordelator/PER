@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI PERIODICO DIGITAL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    <h1> MI PERIODICO DIGITAL</h1>
+</div>
+
+<nav>
+    <!-- Botón del menú hamburguesa (solo visible en celular) -->
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    
+    <!-- Contenedor de los enlaces -->
+    <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="deportes.html">Deportes</a>
+        <a href="musica.html">Música</a>
+        <a href="moda.html">Moda</a>
+        <a href="comida.html">Comida</a>
+    </div>
+</nav>
+
+<main>
+
+<div class="contenido">
+
+<section class="principal">
+    <h2> Nuevas Tendencias</h2>
+    <p>nuevos lugares virales</p>
+</section>
+
+<section class="noticias">
+
+    <div class="card">
+        <h3> Misión a Marte</h3>
+        <p>Avances en exploración espacial.</p>
+    </div>
+
+    <div class="card">
+        <h3>cafeterias</h3>
+        <p>cafeterias lindas para una cita.</p>
+    </div>
+
+    <div class="card">
+        <h3>moda</h3>
+        <p>moda en tendencia.</p>
+    </div>
+
+    <div class="card">
+        <h3>musica</h3>
+        <p>Nuevos artistas.</p>
+    </div>
+
+</section>
+
+</div>
+
+<aside>
+
+    <h3> juego favorito...</h3>
+
+    <p>¿Cual es el juego favorito del año?</p>
+
+    <button onclick="verificar('roblox')">roblox</button>
+    <button onclick="verificar('minecraft')">minecraft</button>
+    <button onclick="verificar('fortnite')">fortnite</button>
+
+    <p id="resultado"></p>
+
+</aside>
+
+</main>
+
+<footer>
+    <p>© 2026 sotas |</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
